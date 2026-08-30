@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: SistemaReservaLaboratorioSalas
+  datasource:
+    url: jdbc:sqlserver://regulus.cotuca.unicamp.br:1433;databaseName=BD23149;encrypt=true;trustServerCertificate=true
+    username: "BD23149"
+    password: "BD23149"
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.format_sql: true
