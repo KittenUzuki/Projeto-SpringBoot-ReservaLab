@@ -1,12 +1,5 @@
--- =========================================================================
--- Modelagem do Banco de Dados - Sistema de Reserva de Laboratorio e Salas
--- SQL Server
---
--- Observacao: a aplicacao usa spring.jpa.hibernate.ddl-auto=update, ou seja,
--- o Hibernate cria/atualiza essas tabelas automaticamente ao subir a API.
--- Este script existe apenas para documentar o modelo (DER) do projeto e
--- pode ser usado para criar o banco manualmente, se preferir.
--- =========================================================================
+--- Modelo do BD do projeto se precisar criar manualmente
+
 
 CREATE TABLE usuario (
     id                INT IDENTITY(1,1) PRIMARY KEY,
@@ -25,9 +18,7 @@ CREATE TABLE status (
     nome    VARCHAR(30) NOT NULL
 );
 
--- tabela base para os recursos que podem ser reservados (herança JOINED:
--- laboratorio e sala guardam os campos comuns aqui e tem sua propria
--- tabela apenas com o id, ligado por FK/PK compartilhada)
+
 CREATE TABLE recurso (
     id           INT IDENTITY(1,1) PRIMARY KEY,
     codigo       VARCHAR(20) NOT NULL UNIQUE,
